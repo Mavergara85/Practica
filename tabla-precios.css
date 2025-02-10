@@ -1,0 +1,56 @@
+body {
+    font-family: "Quicksand", serif;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;  /* Permite que las cajas se acomoden en pantallas pequeñas */
+    justify-content: center;  /* Centra las columnas */
+    gap: 20px; /* Espaciado entre las columnas */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.columna {
+    background: rgb(228, 228, 228);
+    color: #333;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 23%; /* Ajusta el ancho para que entren 4 en una fila */
+    min-width: 200px; /* Evita que sean demasiado pequeñas */
+}
+
+.precio {
+    font-size: 50px;
+    color: rgb(34, 212, 153);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .columna {
+        width: 45%; /* Se mostrarán 2 columnas por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* En pantallas pequeñas, una columna por fila */
+    }
+
+    .columna {
+        width: 90%;
+    }
+}

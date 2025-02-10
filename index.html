@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <h1>marvin</h1>
+
+    <nav href="">Bienvenidos a la pagina</nav>
+    <nav>
+        <button class="nav-boton" onclick="accion()">Menù</button>
+        <a href="" class="nav-enlace desaparece">Inicio</a>
+        <a href="" class="nav-enlace  desaparece">Nosotros</a>
+        <a href="" class="nav-enlace desaparece">Servicios</a>
+        <a href="" class="nav-enlace desaparece">Contacto</a>
+    </nav>
+
+
+    <button>
+        Enviar
+    </button>
+
+    <section class="padre">
+        <p class="columna">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magni temporibus veniam eligendi sunt
+            dignissimos sint dolor! Suscipit, incidunt iusto cum modi quas animi rerum! Fugiat explicabo error eaque
+            laboriosam.
+        </p>
+
+        <p class="columna">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magni temporibus veniam eligendi sunt
+            dignissimos sint dolor! Suscipit, incidunt iusto cum modi quas animi rerum! Fugiat explicabo error eaque
+            laboriosam.
+        </p>
+
+        <p class="columna">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magni temporibus veniam eligendi sunt
+            dignissimos sint dolor! Suscipit, incidunt iusto cum modi quas animi rerum! Fugiat explicabo error eaque
+            laboriosam.
+        </p>
+    </section>
+</body>
+
+<script>
+    function accion(){
+
+        var ancla = document.getElementsByClassName('nav-enlace');
+        for (var i = 0; i < ancla.length; i++){
+            ancla[i].classList.toggle('desaparece');
+        }
+    }
+</script>
+
+</html>
