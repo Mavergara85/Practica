@@ -24,19 +24,36 @@ p {
 }
 
 .columna {
-    background: rgb(228, 228, 228);
+    background: rgba(213, 213, 223, 0.39);
     color: #333;
-    border: 1px solid #333;
+    border: 2px solid #9174748e;
     padding: 20px;
     border-radius: 8px;
     width: 23%; /* Ajusta el ancho para que entren 4 en una fila */
     min-width: 200px; /* Evita que sean demasiado pequeñas */
+    box-shadow: -10px 10px 6px  rgba(70, 75, 73, 0.63);
 }
 
 .precio {
     font-size: 50px;
-    color: rgb(34, 212, 153);
+    color: rgb(99, 20, 99);
 }
+
+.btn-precio{
+    background: rgba(250, 128, 114, 0.74);
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.btn-precio:hover{
+    background: rgba(54, 55, 112, 0.39);
+}
+
+
 
 /* Responsive */
 @media (max-width: 900px) {
