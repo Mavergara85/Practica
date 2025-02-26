@@ -1,0 +1,290 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+p{
+    display: block; /* Asegura que ocupe todo el ancho disponible */
+    margin-bottom: 15px; /* Agrega espacio debajo del texto */
+}
+body{
+    font-family: "Questrial", serif;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+}
+
+
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.margen-interno{
+    margin: 0 50px;
+}
+
+.header{
+    background: url("imagenes/ante-samarzija-lsmu0rUhUOk-unsplash.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 5px;
+    
+}  
+
+.menu{
+    background:#1f1c1c56;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid rgba(61, 36, 6, 0.5);
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px; /* Asegura que haya suficiente espacio */
+    overflow: visible; /* Evita recortes */
+    margin-top: 26px; /* Baja la imagen */
+}
+
+.logo img {
+    width: 120px; /* Ajusta el tamaño */
+    height: auto; /* Mantiene la proporción */
+    display: block;
+}
+
+
+.nav{
+    
+    flex: 5 1 auto;
+}
+.nav a{
+    color: beige;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+.nav a:hover{
+    color: #995a27d2;
+}
+.social{
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.social a{
+    font-size: 18px;
+    color: beige;
+    padding: 0 5px;
+    margin: 10px;
+}
+
+.social a:hover{
+    color: #995a27d2;
+    
+}
+
+.texto-principal {
+    display: flex;
+    height: 580px;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    text-align: center; /* Asegura que el texto dentro esté centrado */
+}
+
+
+h1{
+    font-family: "Quicksand", serif;
+    font-size: 21px;
+    color: beige;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.section{
+    background: radial-gradient(circle, rgba(190, 190, 190, 0.568) 100%);
+    display: flex;
+}
+
+.articulos {
+    background: bei;
+    flex: 2 1 auto;
+    display: flex;
+    flex-flow: row wrap; /* Aquí estaba el error */
+    gap: 10px; /* Agrega espacio entre los artículos si es necesario */
+}
+
+.article {
+    display: inline-block;
+    flex-direction: column;
+    position: relative;
+    color:beige;
+    font-size: 14px;
+    letter-spacing: 1px;
+    flex: 1 1 calc(40% - 20px);
+    margin-top: 10px;
+    background: #1f1009;
+    padding: 12px 20px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-decoration: none; /* Quita el subrayado */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.article img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.article a {
+    color: beige;
+    font-size: 13px;
+    padding: 10px;
+    background: #000000;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.article a:hover {
+    background: #5a230a; /* Un tono más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Hace que el botón crezca un poco */
+}
+
+
+h3 {
+    font-size: 13px;
+    padding: 5px 0;
+    margin-top: 5px; /* Cambiado para evitar superposición */
+    color: beige; /* Color más visible en fondos claros */
+    
+}
+
+.historia {
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    font-weight: bold;
+    color: beige; /* Ajusta según el fondo */
+    text-align: center; /* Centra el texto horizontalmente */
+    display: block; /* Asegura que ocupe todo el ancho disponible */
+    margin-bottom: 15px; /* Agrega espacio debajo del texto */
+}
+
+
+
+h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 0; /* Elimina el padding extra */
+    margin-bottom: 5px; /* Reduce el margen inferior */
+}
+
+.navegacion {
+    background: #1f1009;
+    flex: 1 1 100%;
+    margin: 10px 10px 0;
+    justify-content: center;
+}
+
+.navegacion a {
+    color: beige;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding:0 10px;
+    letter-spacing: 2px;
+}
+
+
+.aside{
+    
+    flex: 1 1 auto;
+    margin: 10px 5px 10px 0;
+    border-radius: 2px;
+}
+
+.aside img{
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+}
+
+.publicidad{
+    
+}
+
+h4{
+    background: #1f1009;
+    color: beige;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+}
+.footer div {
+    width: 100%;
+    text-align: center;
+}
+
+.pie{ 
+    text-align: center;
+}
+
+.pie a{
+    color: beige;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 800px) {
+    .section {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .menu{
+        flex-direction: column !important;
+        height: auto;
+    }
+}
+
+@media all and (max-width:600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width:400px){
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
