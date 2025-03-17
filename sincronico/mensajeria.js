@@ -1,3 +1,6 @@
+//
+
+
 /**Paso 1: Entender lo que quiero hacer
 Quiero crear un sistema básico en el que:
 

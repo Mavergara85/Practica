@@ -1,0 +1,17 @@
+[
+    { "id": 1, "nombre": "Arroz 5kg", "precio": 22000 },
+    { "id": 2, "nombre": "Aceite vegetal 1L", "precio": 15000 },
+    { "id": 3, "nombre": "Azúcar 1kg", "precio": 5000 },
+    { "id": 4, "nombre": "Café 500g", "precio": 18000 },
+    { "id": 5, "nombre": "Leche 1L", "precio": 4500 },
+    { "id": 6, "nombre": "Huevos (30 unidades)", "precio": 18000 },
+    { "id": 7, "nombre": "Pan tajado 500g", "precio": 6000 },
+    { "id": 8, "nombre": "Queso doble crema 500g", "precio": 22000 },
+    { "id": 9, "nombre": "Pollo entero 1.5kg", "precio": 27000 },
+    { "id": 10, "nombre": "Carne de res 1kg", "precio": 35000 },
+    { "id": 11, "nombre": "Pescado mojarra 1kg", "precio": 25000 },
+    { "id": 12, "nombre": "Papas criollas 2kg", "precio": 12000 },
+    { "id": 13, "nombre": "Tomates 1kg", "precio": 6000 },
+    { "id": 14, "nombre": "Cebolla 1kg", "precio": 5500 },
+    { "id": 15, "nombre": "Plátanos 1kg", "precio": 7000 }
+]

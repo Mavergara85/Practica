@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap'); 
+/* Importa la fuente 'Rubik' desde Google Fonts para usarla en toda la página */
+
+/* Variables CSS */
+:root {                      
+    /* Definición de colores principales */
+    --clr-black: #1c1c1c;
+    --clr-gray: #ececec;
+    --clr-white: #f7f7f7;
+
+    /* Definición de colores para tipos de Pokémon */
+    --type-normal: #A8A878;
+    --type-fire: #F08030;
+    --type-water: #6890F0;
+    --type-grass: #78C850;
+    --type-electric: #F8D030;
+    --type-ice: #98D8D8;
+    --type-fighting: #C03028;
+    --type-poison: #A040A0;
+    --type-ground: #E0C068;
+    --type-flying: #A890F0;
+    --type-psychic: #F85888;
+    --type-bug: #A8B820;
+    --type-rock: #B8A038;
+    --type-ghost: #705898;
+    --type-dark: #705848;
+    --type-dragon: #7038F8;
+    --type-steel: #B8B8D0;
+    --type-fairy: #F0B6BC;
+}
+
+/* Estilos generales para toda la página */
+* {
+    margin: 0;  /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+    box-sizing: border-box; /* Asegura que el tamaño incluya el padding y border */
+    color: var(--clr-black); /* Aplica color de texto negro por defecto */
+    font-family: 'Rubik', sans-serif; /* Usa la fuente importada */
+}
+
+ul {
+    list-style-type: none; /* Elimina los estilos de viñetas en listas */
+}
+
+button {
+    background-color: transparent; /* Hace los botones transparentes */
+    border: 0; /* Elimina los bordes de los botones */
+    border-radius: 0; /* No permite bordes redondeados */
+}
+
+body {
+    min-height: 100vh; /* Asegura que el cuerpo tenga al menos el tamaño completo de la pantalla */
+    background-color: var(--clr-gray); /* Fondo gris */
+    background-color: var(--type-ice);
+}
+
+header {
+    padding-block: 1rem; /* Agrega espaciado en la parte superior e inferior del header */
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.5); /* Sombra difusa para el encabezado */
+}
+
+.nav {
+    display: flex; /* Activa flexbox para la navegación */
+    flex-direction: column; /* Coloca los elementos en columna */
+    gap: 1rem; /* Espacio entre elementos */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    padding-inline: 2rem; /* Espaciado a los lados */
+    max-width: 1000px; /* Ancho máximo */
+    margin: 0 auto; /* Centra la navegación */
+}
+
+.nav-list {
+    display: flex; /* Activa flexbox para que este uno al lado de otro los nombre de los pokemons*/
+    align-items: center; /* Alinea los elementos al centro */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+    gap: .5rem; /* Espacio entre elementos */
+}
+
+.btn-header {
+    background-color: var(--clr-gray); /* Color de fondo */
+    padding: .5rem; /* Espaciado interno */
+    border-radius: 100vmax; /* Bordes completamente redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    font-weight: 600; /* Hace el texto más grueso */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25); /* Agrega sombra al botón */
+    transition: .2s; /* Agrega una animación suave */
+}
+
+.btn-header:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño de los botones al pasar el cursor */
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25); /* Aumenta la sombra */
+}
+
+main {
+    padding: 2rem; /* Espaciado interno */
+    max-width: 1000px; /* Ancho máximo */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+/* Diseño de tarjetas de Pokémon */
+.pokemon-todos {
+    display: grid; /* Activa el diseño de cuadrícula, grilla de dos columnas*/
+    grid-template-columns: 1fr; /* Una sola columna por defecto */
+    gap: 1rem; /* Espaciado entre tarjetas */
+}
+
+/* Adaptación para pantallas más grandes */
+@media screen and (min-width: 470px) {
+    .pokemon-todos {
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .pokemon-todos {
+        grid-template-columns: 1fr 1fr 1fr; /* Tres columnas 1fr es una unidad de medida en CSS Grid que representa una fracción del espacio disponible en un contenedor de cuadrícula (grid).
+*/
+    }
+}
+ /* Estilos de la tarjeta de Pokémon padre */
+.pokemon {
+    border-radius: 1rem; /* Bordes redondeados de los cuadros de los pokemon */
+    background-color: var(--clr-white); /* Fondo blanco */
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.637); /* Sombra */
+    padding-block: 1rem; /* Espaciado vertical */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    position: relative; /* Permite posicionar elementos internos */
+    isolation: isolate; /* Evita que los elementos internos afecten a los externos */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+
+/* ID del Pokémon en la parte trasera  numero - Hijo*/
+.pokemon-id-back {
+    position: absolute; /* Posición absoluta dentro de la tarjeta */
+    top: 1rem; /* Desde la parte superior 1rem = 16px (si no se ha cambiado el tamaño de fuente del <html>) */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Centrado exacto el numero trasero del pokemon */
+    font-size: 6rem; /* Tamaño grande numero trasero de pokemon  */
+    font-weight: 800; /* Texto en negrita */
+    z-index: -1; /* Envía el elemento al fondo, detrás de otros elementos.*/
+    color: #b8a13834; /* Color gris Usa una variable CSS para definir el color, facilitando reutilización y mantenimiento.*/
+}
+
+/* Estilos de la imagen del Pokémon */
+.pokemon-imagen {
+    padding-inline: 1rem; /* Espaciado lateral, tengan un padding minimo */
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra la imagen */
+}
+
+.pokemon-imagen img {
+    width: 100%; /* Imagen ocupa el 100% de su contenedor */
+    max-width: 6rem; /* Límite máximo */
+}
+
+/* Información del Pokémon */
+.pokemon-info {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Acomoda los elementos en una columna */
+    gap: .5rem; /* Espaciado entre elementos de 0.5rem */
+    padding-inline: 1rem; /* Añade padding a los lados (izquierda y derecha) */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+/* Contenedor del nombre del Pokémon */
+.nombre-contenedor {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    column-gap: .5rem; /* Espaciado entre los elementos de 0.5rem */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+/* ID del Pokémon */
+.pokemon-id {
+    background-color: #b8a13834; /* Fondo de color gris */
+    padding: .25rem .5rem; /* Espaciado interno (arriba/abajo: 0.25rem, izquierda/derecha: 0.5rem) */
+    border-radius: 100vmax; /* Bordes redondeados (ovalado) */
+    font-size: .75rem; /* Tamaño del texto */
+    font-weight: 500; /* Grosor de la fuente */
+}
+
+/* Nombre del Pokémon */
+.pokemon-nombre {
+    font-size: 1.4rem; /* Tamaño del texto del pokemon */
+}
+
+/* Tipos de Pokémon */
+.pokemon-tipos {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    gap: .5rem; /* Espaciado entre elementos de 0.5rem */
+    font-size: .75rem; /* Tamaño del texto */
+    font-weight: 500; /* Grosor de la fuente */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si es necesario */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilos generales para cada tipo de Pokémon */
+.tipo {
+    padding: .25rem .5rem; /* Espaciado interno */
+    border-radius: 100vmax; /* Bordes redondeados */
+}
+
+/* Estadísticas del Pokémon */
+.pokemon-stats {
+    display: flex; /* Usa flexbox */
+    gap: 1rem; /* Espaciado entre elementos de 1rem */
+    font-size: .85rem; /* Tamaño del texto */
+}
+
+/* Estilo de cada estadística */
+.stat {
+    background-color:#38b8a734; /* Fondo gris */
+    padding: .25rem .5rem; /* Espaciado interno */
+    border-radius: 100vmax; /* Bordes redondeados */
+}
+
+/* Colores según el tipo de Pokémon */
+.normal { background-color: var(--type-normal); color: var(--clr-black); } /* Tipo Normal */
+.fire { background-color: var(--type-fire); color: var(--clr-black); } /* Tipo Fuego */
+.water { background-color: var(--type-water); color: var(--clr-white); } /* Tipo Agua */
+.grass { background-color: var(--type-grass); color: var(--clr-black); } /* Tipo Planta */
+.electric { background-color: var(--type-electric); color: var(--clr-black); } /* Tipo Eléctrico */
+.ice { background-color: var(--type-ice); color: var(--clr-black); } /* Tipo Hielo */
+.fighting { background-color: var(--type-fighting); color: var(--clr-white); } /* Tipo Lucha */
+.poison { background-color: var(--type-poison); color: var(--clr-white); } /* Tipo Veneno */
+.ground { background-color: var(--type-ground); color: var(--clr-black); } /* Tipo Tierra */
+.flying { background-color: var(--type-flying); color: var(--clr-black); } /* Tipo Volador */
+.psychic { background-color: var(--type-psychic); color: var(--clr-black); } /* Tipo Psíquico */
+.bug { background-color: var(--type-bug); color: var(--clr-black); } /* Tipo Bicho */
+.rock { background-color: var(--type-rock); color: var(--clr-black); } /* Tipo Roca */
+.ghost { background-color: var(--type-ghost); color: var(--clr-white); } /* Tipo Fantasma */
+.dark { background-color: var(--type-dark); color: var(--clr-white); } /* Tipo Siniestro */ 
+.dragon { background-color: var(--type-dragon); color: var(--clr-white); } /* Tipo Dragón */
+.steel { background-color: var(--type-steel); color: var(--clr-black); } /* Tipo Acero */
+.fairy { background-color: var(--type-fairy); color: var(--clr-black); } /* Tipo Hada */    
+/* ... (continúa con los demás tipos) */
